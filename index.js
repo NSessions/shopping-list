@@ -2,7 +2,7 @@ $(function shoppingListItems(){
     $('#js-shopping-list-form').submit(event => {
         event.preventDefault();
         
-        let shoppingListItem = $('#shopping-list-entry').val('');
+        let shoppingListItem = $('#shopping-list-entry').val();
 
         $('.shopping-list').append(
             `<li>
@@ -16,6 +16,8 @@ $(function shoppingListItems(){
             </button>
             </div>
         </li>`);
+        
+        $('#shopping-list-entry').val('');
     });
        
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
